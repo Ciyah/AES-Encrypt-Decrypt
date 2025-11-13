@@ -82,24 +82,41 @@ Here is what happens if you use the **wrong password**. The script instantly fai
 Install the required library:
 ```bash
 python -m pip install pycryptodome
+```
 
-
----
-
-
-## 📦 Creating a Standalone Executable
+##  2.📦How to Create a Standalone Executable
 You can bundle this script into a **single executable** for your operating system so you can run it without needing to install Python.
 
-**Note:** You must build the executable on the target operating system.
-* Run the command on **Windows** to create a `.exe` file.
-* Run the command on **macOS** to create a Unix executable file.
+1.  **Install PyInstaller:**
+  
+    * **On Windows**
+    ```bash
+    python -m pip install pyinstaller
+    ```
+    * **On macOS or Linux**
+    ```bash
+    python3 -m pip install pyinstaller
+    ```
+    
+2.  **Run the build command:**
+    PyInstaller will create an executable for the OS you are currently on.
 
----
-### 1. Install PyInstaller
-First, install PyInstaller on the machine:
-```bash
-# On Windows
-python -m pip install pyinstaller
+    * **On Windows (.exe):**
+        ```bash
+        pyinstaller --onefile -n AEgiSCrypt.exe AES.py
+        ```
+    * **On macOS or Linux:**
+        ```bash
+        pyinstaller --onefile -n AEgiSCrypt AES.py
+        ```
+3.  **Find and run your executable:** Your new executable (`AEgiSCrypt.exe` or `AEgiSCrypt`) will be inside the new `dist` folder.
 
-# On macOS
-python3 -m pip install pyinstaller
+    * **On Windows**
+    ```bash
+    .\dist\AEgiSCrypt.exe encrypt -i message.txt -o encrypted.bin
+    ```
+
+    * **On macOS/Linux**
+    ```bash
+    ./dist/AEgiSCrypt encrypt -i message.txt -o encrypted.bin
+    ```

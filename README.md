@@ -1,4 +1,4 @@
-# AES-Encrypt-Decrypt 🔐
+# AEgiScrypt🔐
 > 🔐A Secure file encryption/decryption CLI tool using AES-256-GCM, PBKDF2, and a random salt.
 
 ---

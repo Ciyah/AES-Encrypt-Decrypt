@@ -5,13 +5,13 @@ from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Random import get_random_bytes
 
-# --- CONFIGURATION ---
+# --- CONFIGURATION SETTINGS ---
 KEY_SIZE = 32         # 32 bytes = 256-bit key
 SALT_SIZE = 16        # 16 bytes = 128-bit salt
 NONCE_SIZE = 16       # 16 bytes = 128-bit nonce
 TAG_SIZE = 16         # 16 bytes = 128-bit tag
 ITERATIONS = 100000   # Number of PBKDF2 iterations
-# ---------------------
+# ------------------------------
 
 def encrypt(password, plaintext_file, ciphertext_file):
     """

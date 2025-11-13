@@ -45,7 +45,8 @@ First, we start with a simple text file containing a secret message.
 Next, we run the `encrypt` command in the terminal. It securely prompts for a password (which is hidden as you type).
 
 <img width="1185" height="72" alt="image" src="https://github.com/user-attachments/assets/2c56ef55-7a2c-45ba-9114-1113d2f08a1c" />
-Example the Password  i have used is Ciyah123
+
+Example the password  i have used is  **Ciyah123**
 
 
 ---
